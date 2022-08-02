@@ -1,0 +1,54 @@
+﻿@page 
+@model RazorProject.Pages.Employees.DetailsModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using RazorProject.Components
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Employee</h4>
+    <component type="typeof(RazorProject.Components.EmployeeCard)"render-mode="ServerPrerendered" param-Name="@Model.Employee.EmployeeName" param-Id="@Model.Employee.EmployeeId" />
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee.EmployeeName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Employee.EmployeeName)
+        </dd>
+        <dt class="col-sm-2">
+            Project Manager of
+        </dt>
+    </dl>
+    <ul>
+        @foreach(var item in Model.Employee.Projects)
+        {
+        <li class="col-sm-10">
+            <a asp-page="/Projects/Details" asp-route-id="@item.ProjectId">@Html.DisplayFor(modelItem => item.ProjectName)</a>
+        </li>
+        }
+    </ul>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee.Tasks)
+        </dt>
+    </dl>
+    <ul>
+        @foreach(var item in Model.Employee.Tasks)
+        {
+        <li class="col-sm-10">
+            <a asp-page="/Tasks/Details" asp-route-id="@item.TaskId">@Html.DisplayFor(modelItem => item.TaskName)</a>
+        </li>
+        }
+    </ul>
+</div>
+
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Employee?.EmployeeId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

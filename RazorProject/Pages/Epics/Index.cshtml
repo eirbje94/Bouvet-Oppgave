@@ -1,0 +1,54 @@
+﻿@page
+@model RazorProject.Pages.Epics.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Epic[0].EpicName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epic[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epic[0].Project)
+            </th>
+            <th>
+                No. of Tasks
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Epic) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EpicName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Project.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tasks.Count)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EpicId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EpicId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EpicId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
