@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Annet\\Div\\Ekstra\\Project\\SwaggerProject\\SwaggerProject.csproj": {}
+    "C:\\Users\\mr_gr\\Documents\\Bouvet Oppgave\\SwaggerProject\\SwaggerProject.csproj": {}
   },
   "projects": {
-    "E:\\Annet\\Div\\Ekstra\\Project\\SwaggerProject\\SwaggerProject.csproj": {
+    "C:\\Users\\mr_gr\\Documents\\Bouvet Oppgave\\SwaggerProject\\SwaggerProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Annet\\Div\\Ekstra\\Project\\SwaggerProject\\SwaggerProject.csproj",
+        "projectUniqueName": "C:\\Users\\mr_gr\\Documents\\Bouvet Oppgave\\SwaggerProject\\SwaggerProject.csproj",
         "projectName": "SwaggerProject",
-        "projectPath": "E:\\Annet\\Div\\Ekstra\\Project\\SwaggerProject\\SwaggerProject.csproj",
-        "packagesPath": "C:\\Users\\eirik.CIA\\.nuget\\packages\\",
-        "outputPath": "E:\\Annet\\Div\\Ekstra\\Project\\SwaggerProject\\obj\\",
+        "projectPath": "C:\\Users\\mr_gr\\Documents\\Bouvet Oppgave\\SwaggerProject\\SwaggerProject.csproj",
+        "packagesPath": "C:\\Users\\mr_gr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mr_gr\\Documents\\Bouvet Oppgave\\SwaggerProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eirik.CIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mr_gr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
